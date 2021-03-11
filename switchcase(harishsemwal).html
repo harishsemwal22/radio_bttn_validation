@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switchcase</title>
+    <style>
+.cstm-radio {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.cstm-radio input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+.cstm-radio .checkmark {
+  position: absolute;
+  top: 10px;
+  left: 42%;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+.cstm-radio:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+.cstm-radio input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+.cstm-radio .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.cstm-radio input:checked ~ .checkmark:after {
+  display: block;
+}
+.cstm-radio .checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+h1{
+    font-size:20px;
+    margin: 0;
+}
+.container {
+    display: flex;
+    justify-content:center;
+    flex-wrap: wrap;
+    text-align: center;
+
+}
+.container div {
+    width:100%;
+    max-width: 160px;
+}
+.btn {
+   border:1px solid #2196F3;
+   padding:8px 15px;
+   text-decoration:none;
+   margin: 50px auto;
+   display: inline-block;
+   color:#2196F3;
+   font-size:18px;
+   font-family: sans-serif;
+   
+}
+.btn-wrap {
+    text-align: center;
+}
+ </style>
+</head>
+<body>
+
+<div class="container">
+<div>
+ <h1>1</h1>
+   <label class="cstm-radio">
+     <input type="radio" name="radio" value="1" class="maininput">
+      <span class="checkmark"></span>
+   </label>
+</div>
+<div>
+    <h1>2</h1>
+      <label class="cstm-radio">
+        <input type="radio" name="radio" value="2" class="maininput">
+         <span class="checkmark"></span>
+      </label>
+</div>
+<div>
+    <h1>3</h1>
+      <label class="cstm-radio">
+        <input type="radio" name="radio" value="3" class="maininput">
+         <span class="checkmark"></span>
+      </label>
+</div>
+<div>
+    <h1>4</h1>
+      <label class="cstm-radio">
+        <input type="radio" name="radio" value="4" class="maininput">
+         <span class="checkmark"></span>
+      </label>
+ </div>
+ <div>
+    <h1>5</h1>
+      <label class="cstm-radio">
+        <input type="radio" name="radio" value="5" class="maininput">
+         <span class="checkmark"></span>
+      </label>
+</div>
+</div>
+<div class="btn-wrap">
+<input type="submit" onclick="btnclick();" class="btn">
+</div>
+<script>
+    function btnclick() {
+      var valueget;
+
+      switch(valueget) {
+        case 1:
+        alert("you are selected first");
+        break;
+        case 2:
+        alert("you are selected second");
+        break;
+        case 3:
+        alert("you are selected third");
+        break;
+        case 4:
+        alert("you are selected four");
+        break;
+        case 5:
+        alert("you are selected five");
+        break;
+        default:
+        alert("please select any one");
+      }
+    }
+</script>
+</body>
+</html>
